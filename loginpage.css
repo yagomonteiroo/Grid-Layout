@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-family: "Arial", sans-serif;
+}
+
+
+.page-content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr .5fr;
+}
+
+.page-content main {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1rem 0 1rem;
+  
+}
+
+.page-content main h1{
+  font-size: 3.4rem;
+  /* height: calc(63px*2); */
+}
+.page-content main h1 p + p {
+  color: lightseagreen;
+}
+
+.page-content aside{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.page-content aside .fa-microchip{
+  color: lightseagreen;
+  font-size: 5rem;
+  display: block;
+  text-align: center;
+  padding-bottom: .5rem;
+}
+
+.page-content aside .input-group{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.input-group label{
+  width: 90px;
+}
+.input-group input{
+  width: 85%;
+  height: 30px;
+  padding: .2rem;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.page-content aside button{
+  width:100%;
+  margin: 0 auto;
+  padding: .8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  color:whitesmoke;
+  letter-spacing: 0.5px;
+  margin-top: .5rem;
+}
+button:hover{
+  cursor: pointer;
+}
+
+.page-content footer{
+  background-color: lightseagreen;
+  padding: 1rem 1rem 1.5rem 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.page-content footer li{
+  display: inline;
+}
+.page-content footer a{
+  color: whitesmoke;
+  padding-right: .5rem;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (min-width:1024px) {
+  .page-content {
+    grid-template-areas: "main aside" "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15fr 1.8fr;
+  }
+  main{
+    grid-area: main;
+    margin: auto;
+
+  }
+  aside{
+    grid-area: aside;
+    width: 70%;
+    margin: auto ;
+  }
+  .page-content footer{
+    grid-area: footer;
+    padding:0 0 2.5rem 3.8vw;
+  }
+}
